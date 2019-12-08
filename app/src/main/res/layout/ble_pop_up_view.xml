@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_base">
+    <RelativeLayout
+        android:id="@+id/tittle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/ble_scan_results_pop_up_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp"
+            android:background="@color/color_red"
+            android:textColor="@android:color/white"
+            android:text="Select the device you want to pair"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/upper_layout_paired_devices"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_below="@id/tittle_layout"
+
+    android:layout_above="@+id/ble_scan_results_pop_up_buttons_layout">
+
+
+    <ListView
+        android:id="@+id/ble_scan_results_pop_up_list_paired"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="afterDescendants"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+     >
+
+    </ListView>
+</RelativeLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/ble_scan_results_pop_up_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/ble_scan_results_pop_up_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_line"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/ble_scan_results_pop_up_buttons_rescan_button"
+            android:contentDescription="@string/image_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/new_graphics_rescan"/>
+
+        <ImageView
+            android:id="@+id/ble_scan_results_pop_up_buttons_ok_button"
+            android:contentDescription="@string/image_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/new_graphics_ok_off"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
